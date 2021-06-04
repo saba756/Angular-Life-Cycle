@@ -1,0 +1,13 @@
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  text-align: center;
+}
+.text-center{
+  text-align: center;
+}
+.center-block {
+ align-content: center
+}

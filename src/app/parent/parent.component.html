@@ -1,0 +1,15 @@
+<div class="center">
+  <h2 class="text-center">LifeCycleHooks</h2>
+  <input #val type="text" placeholder="Input here" />
+  <button (click)="SubmitValue(val)">Submit</button>
+  <br>
+  <!-- <button (click)="fun()">Check</button> -->
+  <br>
+
+  <app-child *ngIf="childcompExist" [myValue]="value">
+         {{value}}
+     <h1>Hi Welcome to Ciklum</h1>
+  </app-child>
+  <!-- <button  (click)="destroy()" class="btn btn-danger">Destroy Component</button> -->
+
+</div>
