@@ -4,6 +4,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
+  ContentChild,
   DoCheck,
   Input,
   OnChanges,
@@ -11,6 +12,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { ParentComponent } from '../parent/parent.component';
 
 @Component({
   selector: 'app-child',
@@ -29,6 +31,7 @@ AfterContentChecked
   counter: any;
   num: number= 1;
   department : string = ""
+  @ContentChild(ParentComponent) MessageComponnetContentChild!: ParentComponent;
   constructor() {
     console.log('constructor called');
   }
@@ -44,7 +47,7 @@ AfterContentChecked
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit called');
+    console.log('ngOnInit called',this.MessageComponnetContentChild);
     // this.counter = setInterval(() => {
     //   this.num= this.num + 1;
     //   console.log(this.num)
@@ -56,7 +59,7 @@ AfterContentChecked
   }
 
   ngAfterContentInit(): void {
-    console.log('ngAfterContentInit called');
+    console.log('ngAfterContentInit called',this.MessageComponnetContentChild);
   }
   ngAfterContentChecked(): void  {
     console.log('ngAfterContentCheck called');
